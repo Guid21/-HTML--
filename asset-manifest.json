@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ddb1039e.css",
-    "main.js": "/static/js/main.a2244cfb.js",
-    "static/js/787.9144ac33.chunk.js": "/static/js/787.9144ac33.chunk.js",
-    "index.html": "/index.html",
-    "main.ddb1039e.css.map": "/static/css/main.ddb1039e.css.map",
-    "main.a2244cfb.js.map": "/static/js/main.a2244cfb.js.map",
-    "787.9144ac33.chunk.js.map": "/static/js/787.9144ac33.chunk.js.map"
+    "main.css": "/visual-editor-for-creating-html-forms/static/css/main.ddb1039e.css",
+    "main.js": "/visual-editor-for-creating-html-forms/static/js/main.c8aab54b.js",
+    "static/js/787.9144ac33.chunk.js": "/visual-editor-for-creating-html-forms/static/js/787.9144ac33.chunk.js",
+    "index.html": "/visual-editor-for-creating-html-forms/index.html",
+    "main.ddb1039e.css.map": "/visual-editor-for-creating-html-forms/static/css/main.ddb1039e.css.map",
+    "main.c8aab54b.js.map": "/visual-editor-for-creating-html-forms/static/js/main.c8aab54b.js.map",
+    "787.9144ac33.chunk.js.map": "/visual-editor-for-creating-html-forms/static/js/787.9144ac33.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ddb1039e.css",
-    "static/js/main.a2244cfb.js"
+    "static/js/main.c8aab54b.js"
   ]
 }
