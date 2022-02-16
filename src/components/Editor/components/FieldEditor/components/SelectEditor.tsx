@@ -64,7 +64,7 @@ export const SelectEditor: React.FC<SelectType> = (props) => {
       ...prev,
       fields: [
         ...prev.fields.map((field) => {
-          const options = (field as SelectType).settings.options.filter(
+          const options = (field as SelectType).settings.options?.filter(
             (option) => option[0] !== +(event.target as any).name,
           ) as OptionType[];
 

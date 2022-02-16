@@ -1,6 +1,7 @@
 {
   "name": "visual-editor-for-creating-html-forms",
   "version": "0.1.0",
+  "homepage": "https://guid21.github.io/visual-editor-for-creating-html-forms/",
   "private": true,
   "dependencies": {
     "eslint-config-prettier": "^8.3.0",

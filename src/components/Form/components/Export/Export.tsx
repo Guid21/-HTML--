@@ -10,7 +10,7 @@ export const Export: React.FC<ExportPropsType> = ({ formRef }) => {
   const [cssFile, setCssFile] = React.useState('');
 
   React.useEffect(() => {
-    fetch('/form.css')
+    fetch(`${process.env.PUBLIC_URL}/form.css`)
       .then((response) => response.text())
       .then(setCssFile);
   }, [setCssFile]);
