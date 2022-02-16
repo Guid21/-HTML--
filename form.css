@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+form > * + * {
+  margin-top: 1em;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='phone'],
+input[type='number'],
+input[type='submit'],
+select {
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  width: fit-content;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input[type='submit'] {
+  background-color: #8ee08e;
+  cursor: pointer;
+}
+input[type='submit']:hover {
+  background-color: #81d281;
+}
