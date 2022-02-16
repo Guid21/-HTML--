@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Editor, Form, Header, Main } from './components';
+import { FieldTypesType } from './types';
+
+// Так как приложение маленькое и использует одно состояние и не требует шаблонных редьюсеров
+// не вижу смысла выносить слой данных в какойнибудь redux, контекста хватит с головой
+// redux overhead и добавит ничем не оправданный boilerplate
+type FieldsContextType = Readonly<{
+  form?: FieldTypesType;
+  setForm?: React.Dispatch<React.SetStateAction<FieldTypesType>>;
+}>;
+
+export const FieldsContext = React.createContext<FieldsContextType>({});
+
+const App: React.FC = () => {
+  const [form, setForm] = React.useState<FieldTypesType>({
+    submitText: 'Отправить',
+    fields: [],
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FieldsContext.Provider
+      value={{
+        form,
+        setForm,
+      }}
+    >
+      <div className="app">
+        <div>
+          <Header />
+          <Main />
+          <Editor />
+        </div>
+        <div>
+          <Form />
+        </div>
+      </div>
+    </FieldsContext.Provider>
   );
-}
+};
 
 export default App;

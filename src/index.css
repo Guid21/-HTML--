@@ -1,13 +1,73 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 0.7em;
+  background-color: #f9f9f9;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  cursor: pointer;
+}
+
+:root {
+  --app-children-padding-vertical: 1em;
+  --app-children-padding-horizontal: 1em;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.app > div {
+  padding: var(--app-children-padding-vertical) var(--app-children-padding-horizontal);
+}
+
+.app > div:first-child {
+  border-right: dashed gray;
+}
+
+.field-editor {
+  margin-top: 2em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 1em;
+  background-color: #fff;
+}
+
+.card + .card {
+  margin-top: 1em;
+}
+
+.form {
+  position: fixed;
+  height: calc(100vh - var(--app-children-padding-vertical) * 2);
+  width: calc(100vw / 2 - var(--app-children-padding-horizontal) * 2);
+  overflow-y: scroll;
+}
+
+.export {
+  position: fixed;
+  right: var(--app-children-padding-horizontal);
+
+  background-color: blue;
+  color: white;
+}
+
+.btn-delete {
+  margin-top: 1em;
+  color: red;
 }
